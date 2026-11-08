@@ -1,0 +1,21 @@
+# Bi-directional median BRT corridor: 4 signals, alternating near-side / far-side stations.
+length_m: 1800
+intersections:
+  - {x_m: 300,  offset_s: 0,  station: near}
+  - {x_m: 700,  offset_s: 30, station: far}
+  - {x_m: 1150, offset_s: 64, station: near}
+  - {x_m: 1500, offset_s: 90, station: far}
+signal:
+  cycle_s: 100
+  arterial_green_s: 52
+  side_min_green_s: 15
+  max_extension_s: 10
+  max_early_green_s: 10
+bus_headway_s: 300       # 12 buses/h per direction
+cruise_mean_mps: 13.0    # ~29 mph in the median busway
+dwell_mean_s: 20
+dwell_sd_s: 8
+duration_s: 7200
+warmup_s: 600
+side_vph: 450            # per side-street approach, 1 lane
+arterial_vph: 1100       # per arterial direction, 2 general-purpose lanes
